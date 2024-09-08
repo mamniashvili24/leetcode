@@ -1,13 +1,10 @@
 from typing import List
 
-
 class Solution:
     def hasDuplicate(self, nums: List[int]) -> bool:
+        hasset = set()
         for num in nums:
-            for num1 in nums:
-                if  num == num1:
-                    return True
+            if num in hasset:
+                return True
+            hasset.add(num)
         return False
-
-
-print(Solution().hasDuplicate([1,2,3,4]))
