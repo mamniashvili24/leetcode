@@ -15,4 +15,3 @@ class Solution(object):
 sol = Solution()
 result = sol.mySqrt(1)
 print(result)
-print
