@@ -3,7 +3,7 @@ class node:
         self.value = value
         self.next = None
 
-class linked_list:
+class base_linked_list:
     def __init__(self) -> None:
         self.element = None
 
