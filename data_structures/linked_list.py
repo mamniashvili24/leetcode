@@ -4,6 +4,7 @@ class linked_list:
     def __init__(self) -> None:
         self.head = None
         self.tail = None
+        self.count = 0
 
     def insert_first(self, value):
         new_node = node(value)
@@ -13,6 +14,7 @@ class linked_list:
         else:
             new_node.next = self.head
             self.head = new_node
+        self.count += 1
 
     def insert_last(self, value):
         new_node = node(value)
@@ -22,6 +24,7 @@ class linked_list:
         else:
             self.tail.next = new_node
             self.tail = new_node
+        self.count += 1
 
     def remove_first(self):
         if not self.head:
@@ -31,6 +34,7 @@ class linked_list:
         self.head = self.head.next
         if not self.head:
             self.tail = None
+        self.count -= 1
 
     def remove_last(self):
         if not self.head:
@@ -40,6 +44,7 @@ class linked_list:
         if not self.head.next:
             self.head = None
             self.tail = None
+            self.count -= 1
             return
 
         current = self.head
@@ -48,3 +53,7 @@ class linked_list:
 
         current.next = None
         self.tail = current
+        self.count -= 1
+
+    def get_last(self):
+        return self.tail
