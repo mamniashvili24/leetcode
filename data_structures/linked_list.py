@@ -57,3 +57,6 @@ class linked_list:
 
     def get_last(self):
         return self.tail
+    
+    def get_first(self):
+        return self.head
