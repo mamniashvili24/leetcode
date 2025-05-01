@@ -1,7 +1,4 @@
-class node:
-    def __init__(self, value) -> None:
-        self.value = value
-        self.next = None
+from model.node import node
 
 class base_linked_list:
     def __init__(self) -> None:
